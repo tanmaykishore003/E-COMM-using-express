@@ -12,6 +12,8 @@ import bodyParser from 'body-parser';
 // import basicAuthorizer from './src/middlewares/basicAuth.middleware.js';
 import jwtAuth from './src/middlewares/jwt.middleware.js';
 import loggerMiddleware from './src/middlewares/logger.middleware.js';
+import { logger } from './src/middlewares/logger.middleware.js';
+import { ApplicationError } from './src/Error-Handler/applicationError.js';
 
 const app =  express();
 const PORT = 8080;
@@ -43,6 +45,15 @@ app.use('/api/cartItems', jwtAuth, cartRouter)
 app.use('/api/users', userRouter)
 app.get('/', (req, res) => {
     res.send('Welcome to Ecommerce APIs.')
+})
+app.use((err, req, res, next) => {
+    console.log(err.message);
+    if (err instanceof ApplicationError) {
+        res.status(err.statusCode).send(err.message)
+    }
+
+    logger.error(err.stack)
+    res.status(500).send('Something is wrong with our system. please try again later')
 })
 
 app.listen(PORT, () => {
