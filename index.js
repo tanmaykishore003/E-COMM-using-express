@@ -14,6 +14,7 @@ import jwtAuth from './src/middlewares/jwt.middleware.js';
 import loggerMiddleware from './src/middlewares/logger.middleware.js';
 import { logger } from './src/middlewares/logger.middleware.js';
 import { ApplicationError } from './src/Error-Handler/applicationError.js';
+import connectToMongoDB from './src/config/mongodb.js';
 
 const app =  express();
 const PORT = 8080;
@@ -58,4 +59,5 @@ app.use((err, req, res, next) => {
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port no ${PORT}`);
+    connectToMongoDB();
 })
