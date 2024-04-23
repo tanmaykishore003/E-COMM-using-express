@@ -1,13 +1,19 @@
 
+import { ApplicationError } from "../../Error-Handler/applicationError.js"
 import UserModel from "./user.model.js"
 import jwt from "jsonwebtoken"
 
 export default class UserController {
 
-    signUp(req, res) {
-        const {name, email, password, type} = req.body
-        const user = UserModel.signUp(name, email, password, type)
-        res.status(201).send(user)
+    async signUp(req, res) {
+        try {
+            const {name, email, password, type} = req.body
+            const user = await UserModel.signUp(name, email, password, type)
+            res.status(201).send(user)
+        }
+        catch(err) {
+            throw new ApplicationError('Something went wrong', 500)
+        }
     }
 
     signIn(req, res) {

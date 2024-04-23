@@ -11,3 +11,7 @@
 {"level":"info","message":"/api/users/signUp - {\"name\":\"Tanmay\",\"email\":\"tanmay@email.com\",\"password\":\"1234\"}","service":"request-logging"}
 {"level":"info","message":"/api/users/signUp - {\"name\":\"Aakansha\",\"email\":\"saumya@email.com\",\"password\":\"1234\"}","service":"request-logging"}
 {"level":"info","message":"/api/users/signUp - {\"name\":\"Aakansha\",\"email\":\"saumya@email.com\",\"password\":\"1234\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signUp - {\"email\":\"tanmay@ecom.com\",\"password\":\"1234\",\"name\":\"Tanmay\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signUp - {\"email\":\"tanmaykishore@ecom.com\",\"password\":\"1234\",\"name\":\"Tanmay2\",\"type\":\"seller2\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signUp - {\"name\":\"Tanmay\",\"email\":\"tanmay@ecom.com\",\"password\":\"1234\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signUp - {\"name\":\"Tanmay\",\"email\":\"tanmay@ecom.com\",\"password\":\"1234\",\"type\":\"seller\"}","service":"request-logging"}
