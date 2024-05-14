@@ -15,3 +15,10 @@
 {"level":"info","message":"/api/users/signUp - {\"email\":\"tanmaykishore@ecom.com\",\"password\":\"1234\",\"name\":\"Tanmay2\",\"type\":\"seller2\"}","service":"request-logging"}
 {"level":"info","message":"/api/users/signUp - {\"name\":\"Tanmay\",\"email\":\"tanmay@ecom.com\",\"password\":\"1234\",\"type\":\"seller\"}","service":"request-logging"}
 {"level":"info","message":"/api/users/signUp - {\"name\":\"Tanmay\",\"email\":\"tanmay@ecom.com\",\"password\":\"1234\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signUp - {\"name\":\"John Doe\",\"email\":\"john.doe@gmail.com\",\"password\":\"johndoe\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signUp - {\"name\":\"John Doe\",\"email\":\"john.doe@gmail.com\",\"password\":\"johndoe\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signUp - {\"name\":\"John Doe\",\"email\":\"john.doe@gmail.com\",\"password\":\"johndoe\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signUp - {\"name\":\"John Doe\",\"email\":\"john.doe@gmail.com\",\"password\":\"johndoe\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signUp - {\"name\":\"Tanmay\",\"email\":\"tanmay@ecom.com\",\"password\":\"1234\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signUp - {\"name\":\"Tanmay\",\"email\":\"tanmay@ecom.com\",\"password\":\"1234\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signUp - {\"name\":\"Aakansha\",\"email\":\"aakansha@ecom.com\",\"password\":\"1234\",\"type\":\"buyer\"}","service":"request-logging"}
