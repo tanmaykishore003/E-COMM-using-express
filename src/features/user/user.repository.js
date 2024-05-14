@@ -20,12 +20,12 @@ class UserRepository {
         }
     }
 
-    async signIn(email, password) {
+    async findByEmail(email) {
         try {
             const db = getDB()
             const collection = db.collection("users")
 
-            return await collection.findOne({email, password})
+            return await collection.findOne({email})
         }
         catch(err) {
             throw new ApplicationError('Something went wrong with database', 500)

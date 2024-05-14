@@ -22,3 +22,5 @@
 {"level":"info","message":"/api/users/signUp - {\"name\":\"Tanmay\",\"email\":\"tanmay@ecom.com\",\"password\":\"1234\",\"type\":\"seller\"}","service":"request-logging"}
 {"level":"info","message":"/api/users/signUp - {\"name\":\"Tanmay\",\"email\":\"tanmay@ecom.com\",\"password\":\"1234\",\"type\":\"seller\"}","service":"request-logging"}
 {"level":"info","message":"/api/users/signUp - {\"name\":\"Aakansha\",\"email\":\"aakansha@ecom.com\",\"password\":\"1234\",\"type\":\"buyer\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signUp - {\"name\":\"Saumya\",\"email\":\"saumya@ecom.com\",\"password\":\"1234\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signUp - {\"name\":\"Saumya\",\"email\":\"saumya@ecom.com\",\"password\":\"1234\",\"type\":\"seller\"}","service":"request-logging"}
