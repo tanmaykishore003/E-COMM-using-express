@@ -1,4 +1,6 @@
 // Third Party imports
+import dotenv from 'dotenv'
+dotenv.config()
 import express from 'express';
 import swagger from 'swagger-ui-express';
 import apiDocs from './swagger.json' assert {type: 'json'}
