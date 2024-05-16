@@ -14,14 +14,14 @@ const jwtAuth = (req, res, next) => {
     try{
         const payload = jwt.verify(
             token,
-            "jmRdCxf834yOjYVbDkOjhAgyk23b9eek"
+            process.env.JWT_SECRET
         );
-        req.userId = payload.userId
+        req.userID = payload.userID;
         console.log(payload);
-    }
-    // 4. Else return error
-    catch(err) {
-        return res.status(401).send('Unauthorized')
+    } catch(err){
+        // 4. return error.
+        console.log(err);
+        return res.status(401).send('Unauthorized');
     }
 
     // 5. Call next middleware in the pipeline

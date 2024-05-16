@@ -4,8 +4,8 @@ import UserModel from "../user/user.model.js"
 
 
 export default class ProductModel {
-    constructor(id, name, desc, price, imageUrl, category, sizes) {
-        this.id = id,
+    constructor(name, desc, price, imageUrl, category, sizes, id) {
+        this._id = id,
         this.name = name,
         this.desc = desc,
         this.price = price,
@@ -14,14 +14,14 @@ export default class ProductModel {
         this.sizes = sizes
     }
 
-    static getAll() {
-        return products;
-    }
+    // static getAll() {
+    //     return products;
+    // }
 
-    static getSingleProduct(id) {
-        const product = products.find(item => item.id == id);
-        return product
-    }
+    // static getSingleProduct(id) {
+    //     const product = products.find(item => item.id == id);
+    //     return product
+    // }
 
     static filter(minPrice, maxPrice, category) {
         const result = products.filter((product) =>{

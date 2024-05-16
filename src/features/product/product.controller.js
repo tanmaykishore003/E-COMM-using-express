@@ -1,58 +1,87 @@
+import { ApplicationError } from "../../Error-Handler/applicationError.js";
 import ProductModel from "./product.model.js";
+import ProductRepository from "./product.repository.js";
 
 export default class ProductController {
 
-    getAllProducts(req, res) {
-        const product = ProductModel.getAll();
-        res.status(200).send(product)
+    constructor() {
+        this.productRepository = new ProductRepository()
     }
 
-    addProduct(req, res) {
-        const {name, price, sizes} = req.body
-        const newProduct = {
-            name,
-            price: parseFloat(price),
-            sizes: sizes.split(','),
-            imageUrl: req.file.filename,
-        }
-        const product = ProductModel.add(newProduct)
-        res.status(201).send(product)
-    }
-
-    rateProduct(req, res, next) {
+    async getAllProducts(req, res) {
         try {
-            const userId = req.query.userId;
-            const productId = req.query.productId
+            const product = await this.productRepository.getAll();
+            res.status(200).send(product)
+        }
+        catch (err) {
+            throw new ApplicationError('Something went wrong', 500)
+        }
+    }
+
+    async addProduct(req, res) {
+        try {
+            const { name, price, sizes } = req.body
+
+            const newProduct = new ProductModel(
+                name,
+                null,
+                parseFloat(price),
+                req.file.filename,
+                null,
+                sizes.split(','),
+
+            )
+            const product = await this.productRepository.add(newProduct)
+            res.status(201).send(product)
+        }
+        catch (err) {
+            console.log(err);
+            throw new ApplicationError('Something went wrong', 500)
+        }
+    }
+
+    async rateProduct(req, res, next) {
+        try {
+            const userID = req.userID;
+            console.log(req.userID);
+            const productID = req.query.productID
             const rating = req.query.rating
 
-            ProductModel.rateProduct(
-                userId,
-                productId,
-                rating
-            )
+            await this.productRepository.rate(userID, productID, rating)
             return res.status(200).send('Ratings has been added')
         }
-        catch(err) {
+        catch (err) {
             next(err)
         }
     }
 
-    getOneProduct(req, res) {
-        const id = req.params.id;
-        let product = ProductModel.getSingleProduct(id)
-        if(!product) {
-            res.status(404).send('Product not found.')
+    async getOneProduct(req, res) {
+        try {
+            const id = req.params.id;
+            let product = await this.productRepository.get(id)
+            if (!product) {
+                res.status(404).send('Product not found.')
+            }
+            else {
+                return res.status(200).send(product)
+            }
         }
-        else {
-            return res.status(200).send(product)
+        catch (err) {
+            throw new ApplicationError('Something went wrong', 500)
         }
     }
 
-    filterProduct(req, res) {
-        const minPrice = req.query.minPrice
-        const maxPrice = req.query.maxPrice
-        const category = req.query.category
-        const result = ProductModel.filter(minPrice, maxPrice, category)
-        res.status(200).send(result);
+    async filterProduct(req, res) {
+        try {
+            const minPrice = req.query.minPrice
+            const maxPrice = req.query.maxPrice
+            const category = req.query.category
+            const result = await this.productRepository.filter(minPrice, maxPrice, category)
+            res.status(200).send(result);
+        }
+        catch (err) {
+            console.log(err);
+            throw new ApplicationError('Something went wrong', 500)
+        }
     }
 }
