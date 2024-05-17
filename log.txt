@@ -97,3 +97,18 @@
 {"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":\"7.5\"}","service":"request-logging"}
 {"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":\"7.5\"}","service":"request-logging"}
 {"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":\"7.5\"}","service":"request-logging"}
+{"level":"info","message":"/api/cartItems - {\"productID\":\"6644d2b1ccace1584395a0d4\",\"quantity\":2}","service":"request-logging"}
+{"level":"info","message":"/api/cartItems - {\"productID\":\"6644d2b1ccace1584395a0d4\",\"quantity\":2}","service":"request-logging"}
+{"level":"info","message":"/api/cartItems - {\"productID\":\"6644d2b1ccace1584395a0d4\",\"quantity\":2}","service":"request-logging"}
+{"level":"info","message":"/api/cartItems - {\"productID\":\"6644d3e046b24cafe10521f4\",\"quantity\":4}","service":"request-logging"}
+{"level":"info","message":"/api/cartItems - {}","service":"request-logging"}
+{"level":"info","message":"/api/cartItems - {}","service":"request-logging"}
+{"level":"info","message":"/api/users/ - {\"email\":\"saumya@ecom.com\",\"password\":\"1234\"}","service":"request-logging"}
+{"level":"error","message":"SyntaxError: Unexpected token } in JSON at position 65\n    at JSON.parse (<anonymous>)\n    at parse (D:\\DESKTOP\\backend\\RESTfull-API\\E-COMM-API\\node_modules\\body-parser\\lib\\types\\json.js:92:19)\n    at D:\\DESKTOP\\backend\\RESTfull-API\\E-COMM-API\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)\n    at invokeCallback (D:\\DESKTOP\\backend\\RESTfull-API\\E-COMM-API\\node_modules\\raw-body\\index.js:238:16)\n    at done (D:\\DESKTOP\\backend\\RESTfull-API\\E-COMM-API\\node_modules\\raw-body\\index.js:227:7)\n    at IncomingMessage.onEnd (D:\\DESKTOP\\backend\\RESTfull-API\\E-COMM-API\\node_modules\\raw-body\\index.js:287:7)\n    at IncomingMessage.emit (node:events:517:28)\n    at endReadableNT (node:internal/streams/readable:1368:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","service":"request-logging"}
+{"level":"info","message":"/api/users/signUp - {\"name\":\"Aakansha\",\"email\":\"aakansha@ecom.com\",\"password\":\"1234\",\"type\":\"buyer\"}","service":"request-logging"}
+{"level":"info","message":"/api/cartItems - {\"productID\":\"6644d3e046b24cafe10521f4\",\"quantity\":8}","service":"request-logging"}
+{"level":"info","message":"/api/cartItems/66476b0feaebed1d05e16814 - {}","service":"request-logging"}
+{"level":"info","message":"/api/cartItems/66476b0feaebed1d05e16814 - {}","service":"request-logging"}
+{"level":"info","message":"/api/cartItems/66476b0feaebed1d05e16814 - {}","service":"request-logging"}
+{"level":"info","message":"/api/cartItems/66476b0feaebed1d05e16814 - {}","service":"request-logging"}
+{"level":"info","message":"/api/cartItems/66476b0feaebed1d05e16814 - {}","service":"request-logging"}

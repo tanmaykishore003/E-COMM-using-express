@@ -2,11 +2,11 @@ import ProductModel from "../product/product.model.js";
 import UserModel from "../user/user.model.js";
 
 export default class CartItemModel {
-    constructor(productId, userId, quantity, id) {
-        this.productId = productId;
-        this.userId = userId;
+    constructor(productID, userID, quantity, id) {
+        this.productID = productID;
+        this.userID = userID;
         this.quantity = quantity;
-        this.id = id;
+        this._id = id;
     }
 
     static addItemToCart(productId, userId, quantity) {
