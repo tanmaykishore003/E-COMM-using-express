@@ -73,11 +73,41 @@ class ProductRepository {
             const db = getDB()
             const collection = db.collection(this.collection)
 
-            collection.updateOne({
+            // const product = await collection.findOne({_id: new ObjectId(productID)})
+            // const userRating = product?.ratings?.find(r => r.userID == userID)
+            // if(userRating) {
+            //     collection.updateOne({
+            //         _id: new ObjectId(productID), "ratings.userID": new ObjectId(userID)
+            //     }, {
+            //         $set: {'ratings.$.rating': rating}
+            //     })
+            // }
+            // else {
+            //     collection.updateOne({
+            //         _id: new ObjectId(productID)
+            //     }, {
+            //         $push: {ratings: {userID: new ObjectId(userID), rating}}
+            //     })
+            // }
+
+
+
+            // 1. Remove previous ratings
+            await collection.updateOne({
+                _id: new ObjectId(productID)
+            }, {
+                $pull: {ratings: {userID: new ObjectId(userID)}}
+            })
+
+            // 2. Add new Ratings
+            await collection.updateOne({
                 _id: new ObjectId(productID)
             }, {
                 $push: {ratings: {userID: new ObjectId(userID), rating}}
             })
+
+
+            
         }
         catch(err) {
             console.log(err);

@@ -82,3 +82,18 @@
 {"level":"info","message":"/api/products/rate?productID=6644d3e046b24cafe10521f4&rating=4 - {}","service":"request-logging"}
 {"level":"info","message":"/api/products/rate?productID=6644d3e046b24cafe10521f4&rating=4 - {}","service":"request-logging"}
 {"level":"info","message":"/api/products/rate?productID=6644d3e046b24cafe10521f4&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":3.5}","service":"request-logging"}
+{"level":"error","message":"Error: Something went wrong with database\n    at ProductRepository.rate (file:///D:/DESKTOP/backend/RESTfull-API/E-COMM-API/src/features/product/product.repository.js:98:19)\n    at ProductController.rateProduct (file:///D:/DESKTOP/backend/RESTfull-API/E-COMM-API/src/features/product/product.controller.js:49:42)\n    at file:///D:/DESKTOP/backend/RESTfull-API/E-COMM-API/src/features/product/product.routes.js:9:23\n    at Layer.handle [as handle_request] (D:\\DESKTOP\\backend\\RESTfull-API\\E-COMM-API\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\DESKTOP\\backend\\RESTfull-API\\E-COMM-API\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (D:\\DESKTOP\\backend\\RESTfull-API\\E-COMM-API\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (D:\\DESKTOP\\backend\\RESTfull-API\\E-COMM-API\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\DESKTOP\\backend\\RESTfull-API\\E-COMM-API\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (D:\\DESKTOP\\backend\\RESTfull-API\\E-COMM-API\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (D:\\DESKTOP\\backend\\RESTfull-API\\E-COMM-API\\node_modules\\express\\lib\\router\\index.js:280:10)","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":3.5}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":5}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":\"5\"}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":\"5\"}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":\"8\"}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":\"8\"}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":\"8\"}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":\"8\"}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":\"8\"}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":\"7.5\"}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":\"7.5\"}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":\"7.5\"}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"productID\":\"6644d3e046b24cafe10521f4\",\"rating\":\"7.5\"}","service":"request-logging"}
