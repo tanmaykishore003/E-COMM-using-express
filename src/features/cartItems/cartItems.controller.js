@@ -16,7 +16,7 @@ export default class CartItemController{
             quantity
         )
 
-        const newItem = await this.cartItemRepository.addToCartItem(item) 
+        await this.cartItemRepository.addToCartItem(item) 
         return res.status(201).send('Cart is updated.')
     }
 
