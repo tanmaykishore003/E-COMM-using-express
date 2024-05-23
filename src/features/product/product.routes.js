@@ -25,6 +25,10 @@ router.post('/',
     }
 )
 
+router.get('/avergaPrice', (req, res, next) => {
+    productController.averagePrice(req, res, next)
+})
+
 router.get('/:id',
     (req, res) => {
         productController.getOneProduct(req, res)
